@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TableRequests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/home/gettimestamp', [App\Http\Controllers\HomeController::class, 'gettimestamp'])->name('get_timestamp');
 
-// Route::get('/requisition', function () {
-//     return view('requisitions');
-// });
+Route::get('/table-requests', [App\Http\Controllers\TableRequests::class, 'index'])->name('table-requests');

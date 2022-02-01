@@ -31,7 +31,10 @@
                 <div style="margin-left: 2%">
                     {{ __('Your requisition returned:')}}
                     <div>
-                        {{$time}}
+                    {{ __('Timestamp:')}} {{$time}}
+                    </div>
+                    <div>
+                    {{ __('EEST:')}} {{ isset($dateEEST) ? $dateEEST : '' }}
                     </div>
                 </div>
                 @endisset
